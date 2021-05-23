@@ -8,7 +8,8 @@ const app = express();
 app.use(cors());
 
 /* Để chạy server https */
-const https = require("https");
+// const https = require("https");
+const http = require("http");
 const fs = require("fs");
 
 /* Chứng chỉ ssl */
