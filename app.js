@@ -40,6 +40,6 @@ app.use("/", router);
 var server = https.createServer(options, app);
 
 /* Mở cổng server */
-server.listen(process.env.PORT, function () {
+server.listen(process.env.PORT||3000, function () {
   console.log("server running at https://localhost:3000/");
 });
