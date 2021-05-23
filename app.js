@@ -18,16 +18,16 @@ const options = {
 };
 
 /* Session */
-// app.use(
-//   session({
-//     secret: "secret",
-//     resave: false,
-//     saveUninitialized: true,
-//     cookie: {
-//       secure: false,
-//     },
-//   })
-// );
+app.use(
+  session({
+    secret: "secret",
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+      secure: false,
+    },
+  })
+);
 
 /* Cấu hình body-parser */
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -37,7 +37,7 @@ app.use(bodyParser.json());
 app.use("/", router);
 
 /* Run server */
-var server = https.createServer(options, app);
+var server = http.createServer(options, app);
 
 /* Mở cổng server */
 const PORT = process.env.PORT || 3000;
