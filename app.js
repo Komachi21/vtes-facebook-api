@@ -41,5 +41,5 @@ var server = https.createServer(options, app);
 
 /* Mở cổng server */
 server.listen(process.env.PORT||3000, function () {
-  console.log("server running at https://localhost:3000/");
+  console.log("running at https://localhost:3000/");
 });
