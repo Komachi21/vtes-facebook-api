@@ -17,17 +17,17 @@ const options = {
   cert: fs.readFileSync("./localhost.pem"),
 };
 
-/*Session*/
-app.use(
-  session({
-    secret: "secret",
-    resave: false,
-    saveUninitialized: true,
-    cookie: {
-      secure: false,
-    },
-  })
-);
+/* Session */
+// app.use(
+//   session({
+//     secret: "secret",
+//     resave: false,
+//     saveUninitialized: true,
+//     cookie: {
+//       secure: false,
+//     },
+//   })
+// );
 
 /* Cấu hình body-parser */
 app.use(bodyParser.urlencoded({ extended: false }));
